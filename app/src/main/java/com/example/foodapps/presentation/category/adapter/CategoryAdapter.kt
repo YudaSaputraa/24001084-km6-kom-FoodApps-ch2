@@ -1,4 +1,4 @@
-package com.example.foodapp.adapter
+package com.example.foodapps.presentation.category.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

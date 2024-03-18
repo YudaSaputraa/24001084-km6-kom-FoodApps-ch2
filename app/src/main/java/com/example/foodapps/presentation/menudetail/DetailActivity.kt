@@ -12,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.foodapp.model.Menu
 import com.example.foodapps.R
 import com.example.foodapps.databinding.ActivityDetailBinding
+import com.example.foodapps.presentation.main.MainActivity
 import com.example.foodapps.utils.formatToRupiah
 
 class DetailActivity : AppCompatActivity() {
@@ -36,6 +37,7 @@ class DetailActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(binding.root)
         getIntentData()
+        backToHome()
         intent.extras?.getParcelable<Menu>(EXTRAS_DETAIL_MENU)?.let { setItemQuantity(it) }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -106,6 +108,12 @@ class DetailActivity : AppCompatActivity() {
 
     private fun setImgMenu(image: Int?) {
         image?.let { binding.layoutDetailMenu.ivDetailMenu.setImageResource(it) }
+    }
+
+    private fun backToHome() {
+        binding.layoutDetailMenu.icBack.setOnClickListener {
+            finish()
+        }
     }
 
 }

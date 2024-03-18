@@ -5,15 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/iv_detail_menu"
+    <FrameLayout
+        android:id="@+id/frame_menu_img"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_detail_menu"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_back_icon"
+            android:padding="2dp"
+            android:src="@drawable/ic_back"
+            app:tint="?attr/colorControlNormal" />
+    </FrameLayout>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_detail_menu"
@@ -21,7 +38,7 @@
         android:layout_height="120dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_detail_menu">
+        app:layout_constraintTop_toBottomOf="@+id/frame_menu_img">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

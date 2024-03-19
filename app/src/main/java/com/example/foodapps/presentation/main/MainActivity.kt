@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         ActivityMainBinding.inflate(layoutInflater)
     }
 
-    private var adapter: CategoryAdapter? = null
+    private var adapter = CategoryAdapter()
     private val dataSource: CategoryDataSource by lazy {
         CategoryDataSourceImpl()
     }
@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        adapter = CategoryAdapter()
         setCategoryList()
     }
 
@@ -35,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         binding.rvCategory.apply {
             adapter = this@MainActivity.adapter
         }
-        adapter?.submitData(dataSource.getCategoryData())
+        adapter.submitData(dataSource.getCategoryData())
 
     }
 

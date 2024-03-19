@@ -50,15 +50,7 @@ class MenuDataSourceImpl() : MenuDataSource {
                 locationUrl = "https://maps.app.goo.gl/h4wQKqaBuXzftGK77",
                 locationAddress = "Jl. BSD Green Office Park, Jl. BSD Grand Boulevard, Sampora, BSD, Kabupaten Tanggerang, Banten 15345",
                 desc = "Salad segar dengan berbagai macam sayuran dan dressing yang lezat."
-            ), Menu(
-                image = R.drawable.img_salad_menu,
-                name = "Saladdddd",
-                price = 23000.0,
-                locationUrl = "https://maps.app.goo.gl/h4wQKqaBuXzftGK77",
-                locationAddress = "Jl. BSD Green Office Park, Jl. BSD Grand Boulevard, Sampora, BSD, Kabupaten Tanggerang, Banten 15345",
-                desc = "Salad segar dengan berbagai macam sayuran dan dressing yang lezat."
-            )
-
+            ),
         )
     }
 
